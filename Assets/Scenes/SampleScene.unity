@@ -285,11 +285,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Needle
       objectReference: {fileID: 0}
-    - target: {fileID: 5988574330297367827, guid: 7d6f4b5cbac23ad45a90564a0bb62bf9,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.502
-      objectReference: {fileID: 0}
     - target: {fileID: 8839432980816208727, guid: 7d6f4b5cbac23ad45a90564a0bb62bf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -298,7 +293,7 @@ PrefabInstance:
     - target: {fileID: 8839432980816208727, guid: 7d6f4b5cbac23ad45a90564a0bb62bf9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8839432980816208727, guid: 7d6f4b5cbac23ad45a90564a0bb62bf9,
         type: 3}
@@ -328,7 +323,7 @@ PrefabInstance:
     - target: {fileID: 8839432980816208727, guid: 7d6f4b5cbac23ad45a90564a0bb62bf9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8839432980816208727, guid: 7d6f4b5cbac23ad45a90564a0bb62bf9,
         type: 3}

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class NeedleMovementScript : MonoBehaviour
 {
-	[SerializeField]
-	private GameObject needleBody;
+	//[SerializeField]
+	//private GameObject needleBody;
 	
 	private bool canFireNeedle;
 	private bool touchedCircle;
-	private float forceY = 70f;
+	private float forceY = 5f;
 	private Rigidbody2D myBody;
 	
     void Awake()
@@ -19,7 +19,7 @@ public class NeedleMovementScript : MonoBehaviour
 	
 	void Initialize()
 	{
-		needleBody.SetActive(false);
+		//needleBody.SetActive(false);
 		myBody = GetComponent<Rigidbody2D>();
 	}
 	
@@ -38,8 +38,7 @@ public class NeedleMovementScript : MonoBehaviour
 	
 	public void FireTheNeedle()
 	{
-		needleBody.SetActive(true);
-		myBody.isKinematic = false;
+		//needleBody.SetActive(true);
 		canFireNeedle = true;
 	}
 	
@@ -54,7 +53,10 @@ public class NeedleMovementScript : MonoBehaviour
 		{
 			if (target.tag == "Circle")
 			{
-				
+				canFireNeedle = false;
+				touchedCircle = true;
+				myBody.velocity = new Vector2(0, 0);
+				gameObject.transform.SetParent(target.transform);
 			}
 		}
 	}
