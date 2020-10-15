@@ -9,7 +9,7 @@ public class NeedleMovementScript : MonoBehaviour
 	
 	private bool canFireNeedle;
 	private bool touchedCircle;
-	private float forceY = 5f;
+	private float forceY = 20f;
 	private Rigidbody2D myBody;
 	
     void Awake()
@@ -25,7 +25,7 @@ public class NeedleMovementScript : MonoBehaviour
 	
 	void Start()
 	{
-		FireTheNeedle();
+		//FireTheNeedle();
 	}
 
     void Update()
