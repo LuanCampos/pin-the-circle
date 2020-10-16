@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NeedleMovementScript : MonoBehaviour
-{
-	//[SerializeField]
-	//private GameObject needleBody;
-	
+{	
 	private bool canFireNeedle;
 	private bool touchedCircle;
 	private float forceY = 20f;
@@ -19,13 +16,7 @@ public class NeedleMovementScript : MonoBehaviour
 	
 	void Initialize()
 	{
-		//needleBody.SetActive(false);
 		myBody = GetComponent<Rigidbody2D>();
-	}
-	
-	void Start()
-	{
-		//FireTheNeedle();
 	}
 
     void Update()
@@ -38,7 +29,6 @@ public class NeedleMovementScript : MonoBehaviour
 	
 	public void FireTheNeedle()
 	{
-		//needleBody.SetActive(true);
 		canFireNeedle = true;
 	}
 	
@@ -57,6 +47,17 @@ public class NeedleMovementScript : MonoBehaviour
 				touchedCircle = true;
 				myBody.velocity = new Vector2(0, 0);
 				gameObject.transform.SetParent(target.transform);
+				
+				if (ScoreManager.instance != null)
+				{
+					ScoreManager.instance.SetScore();
+				}
+			}
+			
+			else if (target.tag == "NeedleHead" && transform.position.y > 0)
+			{
+				Debug.Log("Game Over.");
+				Time.timeScale = 0f;
 			}
 		}
 	}

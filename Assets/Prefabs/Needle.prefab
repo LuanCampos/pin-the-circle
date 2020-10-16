@@ -94,7 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e601bd0600b134b91a9d795f692ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needleBody: {fileID: 2578142226883771339}
 --- !u!1 &2578142226883771339
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +189,7 @@ GameObject:
   - component: {fileID: 7852690898798203476}
   m_Layer: 0
   m_Name: Needle Head
-  m_TagString: Untagged
+  m_TagString: NeedleHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +269,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
